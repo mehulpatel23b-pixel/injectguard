@@ -1,0 +1,7 @@
+# injectguard runs on the Python standard library alone.
+# No runtime dependencies are required.
+# This file exists so tooling (`pip install -r requirements.txt`,
+# CI caches, etc.) has a conventional entry point.
+
+# Dev/testing (optional):
+#   pip install pytest

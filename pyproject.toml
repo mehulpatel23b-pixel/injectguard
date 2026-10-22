@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "injectguard"
+version = "1.0.0"
+description = "Zero-dependency prompt-injection scanner for LLM apps and agents — scan files, stdin or scraped content for jailbreaks, instruction overrides and exfiltration payloads before they reach your model."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+keywords = [
+    "prompt-injection", "llm-security", "ai-security", "guardrails",
+    "ai-agents", "scanner", "cli", "owasp",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Security",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.scripts]
+injectguard = "injectguard.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
